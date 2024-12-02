@@ -1,0 +1,9 @@
+#NEXUS
+
+begin paup;
+    execute primate-mtDNA.nex;  [Input the Nexus file with sequence alignment]
+    set criterion=distance;    [Use a distance-based method]
+    dset distance=HKY85;       [Set the evolutionary model for distance calculation]
+    nj;                        [Build a Neighbor-Joining tree]
+    savetrees file=primate_tree.nex format=nexus; [Save the resulting tree]
+end;
